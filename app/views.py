@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from app.models import *
+from app.scripts.api import create_data_file
 
 
 def index_page(request):
@@ -31,7 +32,7 @@ def demand_page(request):
 
 def last_vacancies_page(request):
     data = {
-        'last_vacancies': ApiVacancies().create_data_file(ApiVacancies.objects.get(id=1).date).to_html(index=False)
+        'last_vacancies': create_data_file(ApiVacancies.objects.get(id=1).date).to_html(index=False)
     }
     return render(request, 'last_vacancies.html', context=data)
 
