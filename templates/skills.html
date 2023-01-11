@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Навыки</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+</head>
+<header>
+    <img width=auto height="120px" src={% static 'images/header.png' %}>
+</header>
+<body>
+    <article class="general-article">
+        <nav>
+            <ul class="rounded fixed-navigation">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/demand">Востребованность</a></li>
+                <li><a href="/geography">География</a></li>
+                <li><a href="/skills">Скиллы</a></li>
+                <li><a href="/last">Последние вакансии</a></li>
+            </ul>
+        </nav>
+        <article class="right-panel">
+            <div class="data-content-element">
+                <div>{{ skills|safe }}</div>
+                <img src="{% static 'graphics/skills.png' %}">
+            </div>
+
+            <div class="data-content-element">
+                <div>{{ skills_profession|safe }}</div>
+                <img src="{% static 'graphics/skills_profession.png' %}">
+            </div>
+        </article>
+    </article>
+</body>
+<footer>
+    <img width=auto height="120px" src={% static 'images/avatar.jpg' %}>
+    <p>Свалухин Евгений Владимирович<br>РИ-210945</p>
+</footer>
+</html>

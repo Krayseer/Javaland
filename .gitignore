@@ -1,0 +1,5 @@
+app/files/vacancies_with_skills.csv
+db.sqlite3
+venv
+identifier.sqlite
+.idea
